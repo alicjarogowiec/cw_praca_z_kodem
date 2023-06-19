@@ -11,5 +11,7 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Check version of Python
         run: python --version
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Test code using Pylint
         run: pylint app.py
